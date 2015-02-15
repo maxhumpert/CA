@@ -15,3 +15,5 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+//= require bootstrap.min.js
+//= require scripts.js

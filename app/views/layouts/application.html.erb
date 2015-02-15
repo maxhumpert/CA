@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Web2projektCA" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Challenge Accepted" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -45,12 +45,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Web2projektCA</a>
+        <a class="navbar-brand" href="#">Challenge Accepted</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to "Quests", "/quests"  %></li>
+            <li><%= link_to "User", "/users/edit"  %></li>
+            <li><%= link_to "Sign in", "/users/sign_in"  %></li>
+            <li><%= link_to "Log out", "/users/sign_out", :method => :delete %></li>
           </ul>
         </div>
       </div>
@@ -60,6 +61,8 @@
       <div class="row">
         <div class="col-lg-9">
           <%= bootstrap_flash %>
+          <% if notice %>
+          <% end %>
           <%= yield %>
         </div>
         <div class="col-lg-3">
@@ -67,8 +70,8 @@
             <h3>Sidebar</h3>
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Gamecenter", "/path1"  %></li>
+              <li><%= link_to "Categories", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
           </div><!--/.well -->
@@ -76,7 +79,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2015</p>
+        <p>&copy; Challenger 2015</p>
       </footer>
 
     </div> <!-- /container -->
