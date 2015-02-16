@@ -1,0 +1,10 @@
+<h1>Points in the current directory</h1>
+
+<p>
+  The Points in the current directory are:
+</p>
+<ul>
+  <% for quest in @quests %>
+      <li><%= quest.points; %></li>
+  <% end %>
+</ul>
