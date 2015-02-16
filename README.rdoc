@@ -2,6 +2,8 @@
 
 ein Projekt von Eddy Gauzel, Sergei Fladung, Tim Kahler und Max Humpert.
 
+merge
+
 ToDo:
 * was soll das Programm können
 * besonderheiten
