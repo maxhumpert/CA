@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'rolify'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'cancan'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
