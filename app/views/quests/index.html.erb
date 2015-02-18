@@ -10,6 +10,7 @@
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:points) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
+
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -20,7 +21,8 @@
         <td><%= quest.title %></td>
         <td><%= quest.description %></td>
         <td><%= quest.points %></td>
-        <td><%=l quest.created_at %></td>
+        <td><%=l quest.created_at, format: :short%></td>
+
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_quest_path(quest), :class => 'btn btn-default btn-xs' %>
