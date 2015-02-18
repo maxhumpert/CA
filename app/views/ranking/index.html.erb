@@ -1,0 +1,10 @@
+<h1>Points in the current Session</h1>
+
+<p>
+  The Points in the current session are:
+</p>
+<ul>
+  <% for quest in @quests %>
+      <li><%= quest.points; %></li>
+  <% end %>
+</ul>

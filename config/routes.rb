@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ranking/index'
+
   get 'welcome/index'
 
   root :to => "welcome#index"

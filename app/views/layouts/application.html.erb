@@ -45,10 +45,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Challenge Accepted</a>
+        <a class="navbar-brand" href="welcome/index">Challenge Accepted</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "Quests", "/quests"  %></li>
+            <li><%= link_to "Ranking", "ranking/index"  %></li>
             <li><%= link_to "User", "/users/edit"  %></li>
             <li><%= link_to "Sign in", "/users/sign_in"  %></li>
             <li><%= link_to "Log out", "/users/sign_out", :method => :delete %></li>
@@ -67,12 +68,11 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
+            <h3>Categories</h3>
             <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Gamecenter", welcome_index_path  %></li>
-              <li><%= link_to "Categories", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Indoor", welcome_index_path  %></li>
+              <li><%= link_to "Outdoor", "/path2"  %></li>
+              <li><%= link_to "Party", "/path3"  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
