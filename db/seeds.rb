@@ -10,15 +10,21 @@ Category.create name: 'Indoor'
 Category.create name: 'Outdoor'
 Category.create name: 'Party'
 
-pass = pass1234
-admin = User.create email: 'max.humpert@fh-muenster.de', password: pass,
-                    password_confirmation: pass
-admin.add_role :admin
-puts "Admin password is #{pass}"
+Quest.delete_all
+Quest.create(:title => 'Marathon',
+               :description => %{Run 42 km},
+               :points => 300)
+# . . .
+Quest.create(:title => 'Zimmer aufräumen',
+               :description =>
+                   %{Alle Socken vom Boden aufheben},
+               :points => 20)
+# . . .
 
-pass = pass12345
-admin = User.create email: 'sergeifladung@googlemail.com', password: pass,
-                    password_confirmation: pass
-admin.add_role :admin
-puts "Admin password is #{pass}"
+Quest.create(:title => 'Nackte Meile',
+               :description =>
+                   %{Laufe um Mitternacht einmal um den Campus, nackt!},
+               :points => 150)
+
+
 
