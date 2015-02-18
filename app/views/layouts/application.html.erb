@@ -49,8 +49,13 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "Quests", "/quests"  %></li>
+            <% if can?(:create, Quest) %>
             <li><%= link_to "Ranking", "/ranking/index"  %></li>
+            <% end %>
+            <% if can?(:create, Quest) %>
             <li><%= link_to "User", "/users/edit"  %></li>
+            <% end %>
+            <!-- TODO: nur sichtbar für nicht eingeloggt user -->
             <li><%= link_to "Sign in", "/users/sign_in"  %></li>
             <li><%= link_to "Log out", "/users/sign_out", :method => :delete %></li>
           </ul>
