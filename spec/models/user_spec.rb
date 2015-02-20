@@ -14,7 +14,7 @@ require 'rails_helper'
 RSpec.describe User, :type => :model do
   before(:each) do
     @attr = {
-        # :name => "Example User",
+        :name => "Example User",
         :email => "charles@schulzkowski.com",
         :password => "12345678",
         :password_confirmation => "12345678"
@@ -22,6 +22,17 @@ RSpec.describe User, :type => :model do
   end
   it "should create a new instance given valid attributes" do
     User.create!(@attr)
+  end
+
+  it "should require a name" do
+    no_name_user = User.new(@attr.merge(:name => ''))
+    expect(no_name_user).to_not be_valid
+  end
+
+  it "should reject names that are longer than 25 chars" do
+    long_name = "a" * 26
+    long_name_user = User.new(@attr.merge(:name => long_name))
+    expect(long_name_user).to_not be_valid
   end
 
   it "should require an email" do

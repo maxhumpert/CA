@@ -27,12 +27,12 @@ Quest.create(:title => 'Nackte Meile',
                :points => 150)
 #User.delete_all
 pass = "pass1234"
-admin = User.create email: 'max.humpert@fh-muenster.de', password: pass,
+admin = User.create name: 'Weichspueler', email: 'max.humpert@fh-muenster.de', password: pass,
                     password_confirmation: pass
 admin.add_role :admin
 #puts "Admin password is #{pass}"
 pass = "pass12345"
-admin = User.create email: 'sergeifladung@googlmail.com', password: pass,
+admin = User.create name: 'GuyMacObergeill', email: 'sergeifladung@googlemail.com', password: pass,
                     password_confirmation: pass
 admin.add_role :admin
 
