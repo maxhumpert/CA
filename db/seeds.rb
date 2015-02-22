@@ -9,6 +9,8 @@
 Category.create name: 'Indoor'
 Category.create name: 'Outdoor'
 Category.create name: 'Party'
+Category.create name: 'Sport'
+Category.create name: 'Others'
 
 Quest.delete_all
 Quest.create(:title => 'Marathon',
@@ -24,7 +26,9 @@ Quest.create(:title => 'Zimmer aufräumen',
 Quest.create(:title => 'Nackte Meile',
                :description =>
                    %{Laufe um Mitternacht einmal um den Campus, nackt!},
-               :points => 150)
+               :points => 150,
+               :category => 'Others')
+
 #User.delete_all
 pass = "pass1234"
 admin = User.create name: 'Weichspueler', email: 'max.humpert@fh-muenster.de', password: pass,
