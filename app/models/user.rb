@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :name, :presence => true, :uniqueness => true, :length => { :minimum => 3, :maximum => 25 }
+  validates :forename, :surname, :presence => true, :uniqueness => true, :length => { :minimum => 3, :maximum => 25 }
 
 end

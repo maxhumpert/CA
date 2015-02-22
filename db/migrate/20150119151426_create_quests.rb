@@ -4,6 +4,7 @@ class CreateQuests < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.decimal :points
+      t.integer :user_id
 
       t.timestamps null: false
     end

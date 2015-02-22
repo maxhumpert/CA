@@ -1,4 +1,4 @@
-class Quest < ActiveRecord::Base
+class Quest < ActiveRecord::Base #erbt alle Methoden der Base Klasse
   has_many :quest_categories
   has_many :categories, through: :quest_categories
   validates :title, :points, presence: true, uniqueness: true
