@@ -2,15 +2,6 @@
 
 ein Projekt von Eddy Gauzel, Sergei Fladung, Tim Kahler und Max Humpert.
 
-ToDo:
-* was soll das Programm können
-* besonderheiten
-* eventl Aufteilung
-
-* userStory -kurz Präzise (X)
-* Desgin -> Bootstrap (Theme)
-
-
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

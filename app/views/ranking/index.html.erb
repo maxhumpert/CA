@@ -1,10 +1,13 @@
-<h1>Points in the current Session</h1>
+<h1>Ranking</h1>
 
 <p>
-  The Points in the current session are:
+  Lorem ipsum:
 </p>
 <ul>
-  <% for quest in @quests %>
-      <li><%= quest.points; %></li>
-  <% end %>
+  <% @list= @quests.sort_by { |m| m[:points] } %>
+  <% for quest in @list
+      if quest.user_id == current_user.id %>
+      <li><%= quest.title; %>
+        <%= quest.points; %>
+      </li>   <% end %><% end %>
 </ul>

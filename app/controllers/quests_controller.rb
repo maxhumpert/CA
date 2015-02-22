@@ -27,6 +27,8 @@ class QuestsController < ApplicationController
   # POST /quests.json
   def create
     @quest = Quest.new(quest_params)
+    #@quest.user_id = current_user.id
+
 
     respond_to do |format|
       if @quest.save

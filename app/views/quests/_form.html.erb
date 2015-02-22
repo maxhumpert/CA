@@ -16,7 +16,7 @@
   <% end %>
 
   <div class="control-group">
-    <%= f.label :title, :class => 'control-label' %>
+    <%= f.label :title, :class => 'control-label',  title: "give an unique name for the quest", data: {tooltip: true} %>
     <div class="controls">
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
@@ -25,18 +25,17 @@
   <div class="control-group">
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :description, :class => 'form-control' %>
+      <%= f.text_field :description, :class => 'form-control',  title: "say what your quest is about", data: {tooltip: true} %>
     </div>
     <%= error_span(@quest[:description]) %>
   </div>
   <div class="control-group">
-    <%= f.label :points, :class => 'control-label' %>
+    <%= f.label :points, :class => 'control-label', title: "20 - 300", data: {tooltip: true} %>
     <div class="controls">
       <%= f.text_field :points, :class => 'form-control' %>
     </div>
     <%= error_span(@quest[:points]) %>
   </div>
-
 
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
