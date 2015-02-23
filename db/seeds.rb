@@ -10,6 +10,9 @@ Category.create title: 'Indoor', id: 0
 Category.create title: 'Outdoor', id: 1
 Category.create title: 'Party', id: 2
 
+['registered', 'guest', 'admin'].each do |role|
+  Role.find_or_create_by({name: role})
+
 Quest.delete_all
 Quest.create(:title => 'Marathon',
                :description => %{Run 42 km},
@@ -45,4 +48,4 @@ admin = User.create username: 'Johann', email: 'mjohann@rails-experts.com', pass
 admin.add_role :admin
 
 
-
+end

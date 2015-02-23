@@ -9,8 +9,11 @@ class Ability
         can :manage, :all
       else
         # Registered users
+        can :create, :all
         can :read, :all
-      end
+        can :update, Quest do |quest|
+          quest.try(:user) == user
+      end end
     else
       # Guest users
       can :read, :all
