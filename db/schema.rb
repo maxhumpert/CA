@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150223002650) do
+ActiveRecord::Schema.define(version: 20150223060259) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150223002650) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "title"
   end
 
   create_table "quest_categories", force: :cascade do |t|
@@ -44,14 +45,8 @@ ActiveRecord::Schema.define(version: 20150223002650) do
   add_index "quest_categories", ["category_id"], name: "index_quest_categories_on_category_id"
   add_index "quest_categories", ["quest_id"], name: "index_quest_categories_on_quest_id"
 
-  create_table "quests", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.decimal  "points"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
+# Could not dump table "quests" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -64,24 +59,8 @@ ActiveRecord::Schema.define(version: 20150223002650) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
 
-  create_table "users", force: :cascade do |t|
-    t.string   "username"                default: "", null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+# Could not dump table "users" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "users_roles", id: false, force: :cascade do |t|
     t.integer "user_id"
