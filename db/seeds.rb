@@ -28,12 +28,12 @@ Quest.create(:title => 'Nackte Meile',
                 :user_id => 9)
 User.delete_all
 pass = "pass1234"
-admin = User.create forename: 'Max', surname: 'Humpert', email: 'max.humpert@fh-muenster.de', password: pass,
+admin = User.create username: 'Humpert', email: 'max.humpert@fh-muenster.de', password: pass,
                     password_confirmation: pass
 admin.add_role :admin
 #puts "Admin password is #{pass}"
 pass = "pass12345"
-admin = User.create forename: 'Volker', surname:'Acho', email: 'sergeifladung@googlemail.com', password: pass,
+admin = User.create username: 'Fladung', email: 'sergeifladung@googlemail.com', password: pass,
                     password_confirmation: pass
 admin.add_role :admin
 
