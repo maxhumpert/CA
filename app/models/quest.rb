@@ -1,6 +1,5 @@
 class Quest < ActiveRecord::Base #erbt alle Methoden der Base Klasse
-  has_many :quest_categories
-  has_many :categories, through: :quest_categories
+  belongs_to :parent_category, class_name: "Category", foreign_key: 'parent_id'
   has_one :users
   validates :title, :points, presence: true, uniqueness: true
   validates :description, presence: true

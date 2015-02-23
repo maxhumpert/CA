@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:category) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:points) %></th>
@@ -18,6 +19,7 @@
     <% @quests.each do |quest| %>
       <tr>
         <td><%= link_to quest.id, quest_path(quest) %></td>
+        <td><%= quest.category.try(:title) %></td>
         <td><%= quest.title %></td>
         <td><%= quest.description %></td>
         <td><%= quest.points %></td>

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   has_many :quests
   rolify
   # Include default devise modules. Others available are:
@@ -6,6 +7,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :forename, :surname, :presence => true, :uniqueness => true, :length => { :minimum => 3, :maximum => 25 }
+  validates :username, :presence => true, :uniqueness => true, :length => { :minimum => 3, :maximum => 25 }
 
 end
