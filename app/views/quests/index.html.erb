@@ -17,7 +17,7 @@
   <tbody>
     <% @quests.each do |quest| %>
       <tr>
-        <td><%= quest.category.title %></td>
+        <td><%= Category.find(quest.category).title %></td>
         <td><%= quest.title %></td>
         <td><%= quest.description %></td>
         <td><%= quest.points %></td>
