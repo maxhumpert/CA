@@ -3,11 +3,4 @@
 <p>
   Lorem ipsum:
 </p>
-<ul>
-  <% @list= @quests.sort_by { |m| m[:points] } %>
-  <% for quest in @list
-      if quest.user_id == current_user.id %>
-      <li><%= quest.title; %>
-        <%= quest.points; %>
-      </li>   <% end %><% end %>
-</ul>
+<ul>   <% for quest in @quests %>       <li><%= quest.points; %></li>   <% end %> </ul>

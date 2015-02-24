@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'category/indoor'
+
+  get 'category/outdoor'
+
+  get 'category/party'
+
   get 'ranking/index'
 
   get 'welcome/index'
