@@ -6,7 +6,7 @@ RSpec.describe Quest, :type => :model do
 
     expect(quest).to_not be_valid
 
-    # quest.points = 50
-    # expect(quest).to be_valid
+    quest.points = 50
+    expect(quest).to be_valid
   end
 end
