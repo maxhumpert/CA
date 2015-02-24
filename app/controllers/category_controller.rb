@@ -1,6 +1,6 @@
 class CategoryController < ApplicationController
   def indoor
-    @quests = Quest.all
+    @quests = Quest.order('points DESC')
     return @quests
   end
 

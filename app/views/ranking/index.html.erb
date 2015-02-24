@@ -3,4 +3,8 @@
 <p>
   Lorem ipsum:
 </p>
-<ul>   <% for quest in @quests %>       <li><%= quest.points; %></li>   <% end %> </ul>
+<ol> 
+  <% for user in @users %> 
+      <li><%= user.username %> <%= user.points %></li> 
+  <% end %> 
+</ol>
