@@ -36,6 +36,13 @@
     </div>
     <%= error_span(@quest[:points]) %>
   </div>
+    <div class="control-group">
+      <%= f.label :category, :class => 'control-label',  category: "give an unique name for the quest", data: {tooltip: true} %>
+      <div class="controls">
+        <%= collection_select(:quest, :category_id, @categories, :id, :title, options ={:prompt => "-Select a category"}, :class =>"category") %>
+      </div>
+      <%= error_span(@quest[:title]) %>
+    </div>
 
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
