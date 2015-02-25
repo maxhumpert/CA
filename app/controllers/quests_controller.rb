@@ -17,6 +17,12 @@ class QuestsController < ApplicationController
   # GET /quests/new
   def new
     @quest = Quest.new
+
+    @categories = Category.all
+
+    @quest_categories = @quest.quest_categories.build
+
+
   end
 
   # GET /quests/1/edit
