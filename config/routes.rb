@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'greetings/about'
+
   get 'user/add_points_user'
 
   get 'category/indoor'
