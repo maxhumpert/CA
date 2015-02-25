@@ -3,8 +3,13 @@
 <p>
   Lorem ipsum:
 </p>
-<ol> 
+
+<ol type="1">
+
   <% for user in @users %> 
-      <li><%= user.username %>, Points: <%= user.points %></li> 
+<li>
+  <dt> <%=user.username%> </dt>
+  <dd>- with <%= user.points %> points </dd>
   <% end %> 
-</ol>
+  </li>
+  </ol>

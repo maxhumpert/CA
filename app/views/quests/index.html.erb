@@ -11,8 +11,9 @@
       <th><%= model_class.human_attribute_name(:points) %></th>
       <th><%= model_class.human_attribute_name(:category) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
-
+      <% if can?(:create, Quest) %>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -26,8 +27,9 @@
         <td><%=l quest.created_at, format: :short%></td>
 
         <td>
+          <% if can?(:create, Quest) %>
          <%=link_to 'Accept', user_add_points_user_path(quest_id: quest.id)%>
-
+          <% end %>
           <% if can?(:manage, Quest) %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_quest_path(quest), :class => 'btn btn-default btn-xs' %>
