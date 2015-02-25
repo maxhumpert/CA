@@ -5,6 +5,6 @@
 </p>
 <ul> 
   <% for quest in @quests %> 
-      <li><%= quest.title; %></li> 
+      <li><%= quest.title; %> <%= link_to 'Show',  quest%></li> 
   <% end %> 
 </ul>
