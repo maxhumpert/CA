@@ -1,12 +1,11 @@
 class UserController < ApplicationController
   def add_points_user
-    @user = current_user
-    @quest = Quest.find(params[:id])
-    @user.update_attributes(school_id: params[:school_id])
+  User.update(current_user.id, :points => current_user.points + Quest.find(params[:quest_id]).points)
 
-    respond_to do |format|
-      flash[:notice] = "School has been added!"
-      redirect_to @user.school
-    end
+  flash[:notice] = "Points have been added!"
+
+  redirect_to ranking_index_path
+
+
   end
 end

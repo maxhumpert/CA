@@ -34,17 +34,17 @@ Quest.create(:title => 'Nackte Meile',
 User.delete_all
 pass = "pass1234"
 admin = User.create username: 'Humpert', email: 'max.humpert@fh-muenster.de', password: pass,
-                    password_confirmation: pass
+                    password_confirmation: pass, points: '300'
 admin.add_role :admin
 #puts "Admin password is #{pass}"
 pass = "pass12345"
 admin = User.create username: 'Fladung', email: 'sergeifladung@googlemail.com', password: pass,
-                    password_confirmation: pass
+                    password_confirmation: pass, points: '20'
 admin.add_role :admin
 
 pass = "pass1234"
 admin = User.create username: 'Johann', email: 'mjohann@rails-experts.com', password: pass,
-                    password_confirmation: pass
+                    password_confirmation: pass, points: '500'
 admin.add_role :admin
 
 

@@ -26,7 +26,7 @@
         <td><%=l quest.created_at, format: :short%></td>
 
         <td>
-
+         <%=link_to 'Accept', user_add_points_user_path(quest_id: quest.id)%>
 
           <% if can?(:manage, Quest) %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

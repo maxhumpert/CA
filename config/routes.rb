@@ -18,12 +18,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :quests
 
-  resources :users do
-    member do
-      get :following, :followers
-      put :add_points
-    end
-    end
+
 
   #root 'quests#index'
 
