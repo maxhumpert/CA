@@ -39,8 +39,13 @@
     <div class="control-group">
       <%= f.label :category, :class => 'control-label',  category: "give an unique name for the quest", data: {tooltip: true} %>
       <div class="controls">
-        <%= collection_select(:quest, :category_id, @categories, :id, :title, options ={:prompt => "-Select a category"}, :class =>"category") %>
+        <%= f.fields_for :category do |sub| %>
+            <div class='fields'>
+              <%= sub.label 'All Categories' %><br />
+              <%= collection_select(:category, :id, @category, :id, :title, {}) %>
+            </div>
       </div>
+      <% end %>
       <%= error_span(@quest[:title]) %>
     </div>
 
