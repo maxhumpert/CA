@@ -37,13 +37,15 @@
     <%= error_span(@quest[:points]) %>
   </div>
     <div class="control-group">
-      <%= f.label :category, :class => 'control-label',  category: "give an unique name for the quest", data: {tooltip: true} %>
+      <%= f.label :category, :class => 'control-label',  category: "Select a category out of the list", data: {tooltip: true} %>
       <div class="controls">
         <%= f.fields_for :category do |sub| %>
+            <%= fields_for(@quest_categories) do |ab| %>
             <div class='fields'>
-              <%= sub.label 'All Categories' %><br />
-              <%= collection_select(:category, :id, @category, :id, :title, {}) %>
+              <%= ab.label 'All Categories' %><br />
+              <%= collection_select(:categories, :id, @quest_categories, :id, :title, {:multiple => true}) %>
             </div>
+            <% end %>
       </div>
       <% end %>
       <%= error_span(@quest[:title]) %>

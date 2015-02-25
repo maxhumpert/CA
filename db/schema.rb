@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224215119) do
+ActiveRecord::Schema.define(version: 20150225184912) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -36,14 +36,11 @@ ActiveRecord::Schema.define(version: 20150224215119) do
   end
 
   create_table "quest_categories", force: :cascade do |t|
-    t.integer  "quest_id"
-    t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "quest_id",    null: false
+    t.integer  "category_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
-
-  add_index "quest_categories", ["category_id"], name: "index_quest_categories_on_category_id"
-  add_index "quest_categories", ["quest_id"], name: "index_quest_categories_on_quest_id"
 
 # Could not dump table "quests" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
