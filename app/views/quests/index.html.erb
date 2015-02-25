@@ -26,9 +26,8 @@
         <td><%=l quest.created_at, format: :short%></td>
 
         <td>
-          <% if can?(:create, Quest) %>
-          <%= button_to "Accept", new_quest_path, :class => "button", :method => :get  %>
-              <%end%>
+
+
           <% if can?(:manage, Quest) %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_quest_path(quest), :class => 'btn btn-default btn-xs' %>

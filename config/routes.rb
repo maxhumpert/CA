@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/add_points_user'
+
   get 'category/indoor'
 
   get 'category/outdoor'
@@ -13,6 +15,13 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :quests
+
+  resources :users do
+    member do
+      get :following, :followers
+      put :add_points
+    end
+    end
 
   #root 'quests#index'
 
@@ -71,4 +80,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
