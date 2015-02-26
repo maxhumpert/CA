@@ -1,6 +1,4 @@
 class QuestsController < ApplicationController
-  load_and_authorize_resource
-
   before_action :set_quest, only: [:show, :edit, :update, :destroy]
 
   # GET /quests
@@ -17,9 +15,6 @@ class QuestsController < ApplicationController
   # GET /quests/new
   def new
     @quest = Quest.new
-
-    @categories = Category.all
-    @quest_categories = @quest.quest_categories.build
   end
 
   # GET /quests/1/edit
@@ -30,8 +25,6 @@ class QuestsController < ApplicationController
   # POST /quests.json
   def create
     @quest = Quest.new(quest_params)
-    #@quest.user_id = current_user.id
-
 
     respond_to do |format|
       if @quest.save

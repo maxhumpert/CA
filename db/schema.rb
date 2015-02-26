@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 20150226060858) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
-    t.integer  "role_id"
     t.integer  "points",                 default: 10
   end
 

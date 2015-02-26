@@ -1,5 +1,4 @@
 <%- model_class = Quest -%>
-
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
@@ -18,8 +17,6 @@
 <% if can?(:manage, Quest) %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_quest_path(@quest), :class => 'btn btn-default' %>
-<% end %>
-<% if can?(:manage, Quest) %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               quest_path(@quest),
               :method => 'delete',
