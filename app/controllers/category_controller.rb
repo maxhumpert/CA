@@ -14,6 +14,4 @@ class CategoryController < ApplicationController
     return @quests
   end
 
-
-
 end

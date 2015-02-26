@@ -19,10 +19,7 @@ class QuestsController < ApplicationController
     @quest = Quest.new
 
     @categories = Category.all
-
     @quest_categories = @quest.quest_categories.build
-
-
   end
 
   # GET /quests/1/edit
@@ -79,6 +76,6 @@ class QuestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quest_params
-      params.require(:quest).permit(:title, :description, :points)
+      params.require(:quest).permit(:title, :description, :points, :category)
     end
 end
