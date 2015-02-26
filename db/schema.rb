@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224215119) do
+ActiveRecord::Schema.define(version: 20150226060858) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 20150224215119) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "title"
+  end
+
+  create_table "quest_categories", force: :cascade do |t|
+    t.integer  "quest_id",    null: false
+    t.integer  "category_id", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 # Could not dump table "quests" because of following NoMethodError
@@ -64,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150224215119) do
     t.datetime "updated_at"
     t.string   "username"
     t.integer  "role_id"
-    t.integer  "points"
+    t.integer  "points",                 default: 10
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
