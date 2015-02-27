@@ -11,10 +11,15 @@ Erfüllt dieser diese werden ihm Punkte gutgeschrieben, die ihn in der Rangliste
 nach vorne bringen.
 
 Unsere Ziele waren, dass...
+
 	...man sich als neuer User registrieren kann.
+	
 	...man einen Quest erstellen kann.
+	
 	...man einen Quest akzeptieren und damit bestätigen kann, dass man diesen erledigt hat.
+	
 	...man für einen erledigten Quest Punkte gutgeschrieben bekommt.
+	
 	...man sich mit seinen Mitstreitern in einer Rangliste vergleichen kann.
 
 Ein typischer Workflow könnte folgendermaßen aussehen:
