@@ -10,7 +10,7 @@ spielen wir an: Man kann selbst Quests erstellen und somit seinen Freund herausf
 Erfüllt dieser diese werden ihm Punkte gutgeschrieben, die ihn in der Rangliste weiter 
 nach vorne bringen.
 
-Unsere Ziele waren, dass...
+Unsere Ziele waren, dass...</br>
 	...man sich als neuer User registrieren kann.
 	...man einen Quest erstellen kann.
 	...man einen Quest akzeptieren und damit bestätigen kann, dass man diesen erledigt hat.
