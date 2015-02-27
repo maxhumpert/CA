@@ -48,3 +48,6 @@ Starten der Applikation:
 <tt>rake db migrate</tt>
 <tt>rake db:seed</tt>
 <tt>rails server</tt>
+
+Brainstorming/Konzeption:
+https://www.dropbox.com/sh/9qba18j438sco30/AACqIUF7W5QcMFvvyb4WoGZGa?dl=0
