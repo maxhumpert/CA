@@ -10,7 +10,7 @@ spielen wir an: Man kann selbst Quests erstellen und somit seinen Freund herausf
 Erfüllt dieser diese werden ihm Punkte gutgeschrieben, die ihn in der Rangliste weiter 
 nach vorne bringen.
 
-Unsere Ziele waren, dass...</br>
+Unsere Ziele waren, dass...
 	...man sich als neuer User registrieren kann.
 	...man einen Quest erstellen kann.
 	...man einen Quest akzeptieren und damit bestätigen kann, dass man diesen erledigt hat.
@@ -43,13 +43,3 @@ Starten der Applikation:
 <tt>rake db migrate</tt>
 <tt>rake db:seed</tt>
 <tt>rails server</tt>
-
-
-
-
-
-
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
