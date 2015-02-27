@@ -23,13 +23,6 @@ Quest.create(:title => 'Zimmer aufräumen',
                :description => %{Alle Socken vom Boden aufheben},
                :points => 20,
                :category => Category.find(0))
-# . . .
-
-Quest.create(:title => 'Nackte Meile',
-               :description => %{ Laufe um Mitternacht einmal um den Campus, nackt! },
-               :points => 150,
-               :user_id => 9,
-               :category => Category.find(1))
 
 Quest.create(:title => ' Old Selfie ',
                :description => %{ Make a selfie infront of the oldest building in Münster. },

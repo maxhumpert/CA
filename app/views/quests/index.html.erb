@@ -20,7 +20,7 @@
         <td><%= quest.title %></td>
         <td><%= quest.description %></td>
         <td><%= quest.points %></td>
-        <td><%=l quest.created_at %></td>
+        <td><%=l quest.created_at, format: :short%></td>
         <td>
 	<td>
           <% if can?(:create, Quest) %>
