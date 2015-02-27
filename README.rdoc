@@ -1,29 +1,54 @@
-== README
+== Webentwicklung 2 – Projekt: „Challenge Accepted“
 
 ein Projekt von Eddy Gauzel, Sergei Fladung, Tim Kahler und Max Humpert.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Unsere Vision hinter der Website ist, Couchpotatoes und Stubenhocker nach 
+draussen zu locken und diese dazu motivieren, sich sportlich zu betätigen oder 
+wieder mehr mit ihren Freunden zu erleben. Das Konzept dahinter ist genauso simpel 
+wie genial: In jedem von uns steckt der Wettkampfgedanke und genau auf diesen 
+spielen wir an: Man kann selbst Quests erstellen und somit seinen Freund herausfordern. 
+Erfüllt dieser diese werden ihm Punkte gutgeschrieben, die ihn in der Rangliste weiter 
+nach vorne bringen.
 
-Things you may want to cover:
+Unsere Ziele waren, dass...
+	...man sich als neuer User registrieren kann.
+	...man einen Quest erstellen kann.
+	...man einen Quest akzeptieren und damit bestätigen kann, dass man diesen erledigt hat.
+	...man für einen erledigten Quest Punkte gutgeschrieben bekommt.
+	...man sich mit seinen Mitstreitern in einer Rangliste vergleichen kann.
 
-* Ruby version
+Ein typischer Workflow könnte folgendermaßen aussehen:
+USER 1	meldet sich an
+USER 1	erstellt einen neuen Quest
+USER 2	registriert sich
+USER 2	nimmt Quest von USER1 an
+USER 2	bekommt Punkte gutgeschrieben
+USER 2	sieht in der Rangliste seine Punkte nach
+USER 1	loggt sich aus
+USER 2	loggt sich aus
+ADMIN		bearbeitet oder löscht Quest von Usern
 
-* System dependencies
+Installationshinweise:
 
-* Configuration
+Versionsnummern der wichtigsten benutzter Elemente:
+	ruby 2.0.0p481
+	devise 3.4.1
+	rolify 4.0.0
+	twitter-bootstrap-rails 3.2.0
+	cancan 1.6.10
+	sqlite3 1.3.10
 
-* Database creation
+Starten der Applikation:
+<tt>bundle install</tt>
+<tt>rake db migrate</tt>
+<tt>rake db:seed</tt>
+<tt>rails server</tt>
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
 
 
 Please feel free to use a different markup language if you do not plan to run
